@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './Fille/Profile/NoficationSetting.js';
+import App from './Fille/VottingPage.js';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
