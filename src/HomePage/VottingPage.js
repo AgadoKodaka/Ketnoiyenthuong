@@ -5,15 +5,14 @@ import {
   StyleSheet,
   Text,
   StatusBar,
-  TouchableOpacity,
   TextInput,
 } from 'react-native';
-import IconLove from '../assets/SVG/in_love1.svg';
-import IconSmile from '../assets/SVG/smile1.svg';
-import IconSmile2 from '../assets/SVG/smile2.svg';
-import IconGreenTick from '../assets/SVG/ant-design_check-circle-filled.svg';
+import IconLove from '../../assets/SVG/in_love1.svg';
+import IconSmile from '../../assets/SVG/smile1.svg';
+import IconSmile2 from '../../assets/SVG/smile2.svg';
+import IconGreenTick from '../../assets/SVG/ant-design_check-circle-filled.svg';
 
-import SquareButton from './components/SquareButton';
+import SquareButton from '../components/SquareButton';
 const App = () => {
   const [isEnabled1, setIsEnabled1] = useState(false);
   const [isEnabled2, setIsEnabled2] = useState(false);

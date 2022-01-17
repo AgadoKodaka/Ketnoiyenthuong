@@ -1,11 +1,11 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Page1} from './Fille/LoginPage';
-import {Page2} from './Fille/MakeNewAcc';
-import {Page3} from './Fille/RecoveryAcc';
-import {Page4} from './Fille/2faAuth';
-import {Page5} from './Fille/PassReset';
+import {Page1} from './src/HomePage/LoginPage';
+import {Page2} from './src/HomePage/MakeNewAcc';
+import {Page3} from './src/HomePage/RecoveryAcc';
+import {Page4} from './src/HomePage/2faAuth';
+import {Page5} from './src/HomePage/PassReset';
 
 const Stack = createNativeStackNavigator();
 

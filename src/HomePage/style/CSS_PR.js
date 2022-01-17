@@ -1,43 +1,4 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  FlatList,
-  StyleSheet,
-  Text,
-  StatusBar,
-  Image,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
-const logo1 = require('../assets/images/logo1.png');
-const Page5 = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
-      <Image source={logo1} style={styles.image} />
-      <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
-        Reset your password
-      </Text>
-      <Text style={{width: '80%', textAlign: 'center', marginTop: 18}}>
-        Create your new password below.
-      </Text>
-      <TextInput
-        style={styles.inputId1}
-        placeholder="Enter your new password"
-        color="black"
-      />
-      <TextInput
-        style={styles.inputId2}
-        placeholder="Confirm your new password"
-        color="black"
-      />
-      <TouchableOpacity style={styles.button}>
-        <Text style={(styles.buttonText, {color: 'white'})}>Confirm</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
-  );
-};
+import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -51,23 +12,25 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   inputId1: {
-    width: '80%',
+    width: '90%',
     height: 50,
     borderColor: '#C4C4C4',
     borderWidth: 0.5,
     marginTop: 42,
-    paddingHorizontal: 10,
+    padding: 10,
+    paddingHorizontal: 25,
     color: '#fff',
     backgroundColor: 'white',
     borderRadius: 10,
   },
   inputId2: {
-    width: '80%',
+    width: '90%',
     height: 50,
     borderColor: '#C4C4C4',
     borderWidth: 0.5,
     marginTop: 18,
-    paddingHorizontal: 10,
+    padding: 10,
+    paddingHorizontal: 25,
     color: '#fff',
     backgroundColor: 'white',
     borderRadius: 10,
@@ -115,5 +78,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-export {Page5};
+export default styles;
