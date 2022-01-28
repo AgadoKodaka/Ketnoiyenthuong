@@ -2,29 +2,28 @@ import React from 'react';
 import {
   SafeAreaView,
   View,
-  StyleSheet,
   Text,
   StatusBar,
   Image,
   TouchableOpacity,
 } from 'react-native';
+import styles from './style/CSS_HP';
 import image from '../../assets/images/Ellipse_7.png';
 import icon from '../../assets/images/carbon_add-alt.png';
-import iconEmail from '../../assets/images/email_1.png';
-import iconPhone from '../../assets/images/telephone_1.png';
-import iconFB from '../../assets/images/entypo-social_facebook-with-circle.png';
-import iconHuman from '../../assets/images/Vector_(2).png';
-import iconCog from '../../assets/images/Vector_(3).png';
-import iconStar from '../../assets/images/Vector_(4).png';
-import iconQuestion from '../../assets/images/Vector_(5).png';
-import iconArrow from '../../assets/images/Vector_(6).png';
-import SvgTest from '../../assets/images/TestingSVG.svg';
+import IconEmail from '../../assets/SVG/email1.svg';
+import IconPhone from '../../assets/SVG/telephone1.svg';
+import IconFB from '../../assets/SVG/entypo-social_facebook_with_circle.svg';
+import IconHuman from '../../assets/SVG/bx_bxs_user_circle.svg';
 import IconBack from '../../assets/SVG/Vector.svg';
 import IconHome from '../../assets/SVG/Vector_(1).svg';
 import IconHeart from '../../assets/SVG/heart_(1) 2.svg';
 import IconMessenger from '../../assets/SVG/Vector_(2).svg';
 import IconInfo from '../../assets/SVG/Group_106.svg';
-const App = () => {
+import IconCog from '../../assets/SVG/clarity_settings_solid.svg';
+import IconStar from '../../assets/SVG/ant-design_star_filled.svg';
+import IconHelp from '../../assets/SVG/ic_round-contact_support.svg';
+``;
+const Page6 = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
@@ -69,50 +68,39 @@ const App = () => {
             <View style={styles.bodyConfimationMethodDecorationDeadSpace} />
           </View>
           <View style={styles.bodyConfimationMethodIcons}>
-            <Image
-              source={iconEmail}
-              style={styles.bodyConfimationMethodIcon}
-            />
-            <Image
-              source={iconPhone}
-              style={styles.bodyConfimationMethodIcon}
-            />
-            <Image source={iconFB} style={styles.bodyConfimationMethodIcon} />
-            <Image
-              source={iconHuman}
-              style={styles.bodyConfimationMethodIcon}
-            />
+            <View style={styles.bodyConfimationMethodIcon}>
+              <IconEmail />
+            </View>
+            <View style={styles.bodyConfimationMethodIcon}>
+              <IconPhone />
+            </View>
+            <View style={styles.bodyConfimationMethodIcon}>
+              <IconFB />
+            </View>
+            <View style={styles.bodyConfimationMethodIcon}>
+              <IconHuman />
+            </View>
           </View>
         </View>
         <TouchableOpacity
           style={[styles.bodySettingOptionsItem, {marginTop: 40}]}>
-          <Image source={iconCog} style={styles.bodySettingOptionsItemIcon} />
+          <IconCog style={styles.bodySettingOptionsItemIcon} />
           <Text style={[styles.bodySettingOptionsItemText, {numberOfLines: 1}]}>
             Account setting
           </Text>
           <IconBack style={styles.bodySettingOptionsItemIconBack} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.bodySettingOptionsItem}>
-          <Image source={iconStar} style={styles.bodySettingOptionsItemIcon} />
+          <IconStar style={styles.bodySettingOptionsItemIcon} />
           <Text style={styles.bodySettingOptionsItemText}>Rate!!</Text>
           <IconBack style={styles.bodySettingOptionsItemIconBack} />
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.bodySettingOptionsItem, {borderBottomWidth: 0}]}>
-          <Image
-            source={iconQuestion}
-            style={styles.bodySettingOptionsItemIcon}
-          />
+          <IconHelp style={styles.bodySettingOptionsItemIcon} />
           <Text style={styles.bodySettingOptionsItemText}>Help</Text>
           <IconBack style={styles.bodySettingOptionsItemIconBack} />
         </TouchableOpacity>
-        {/* <View
-            style={[
-              StyleSheet.absoluteFill,
-              {alignItems: 'center', justifyContent: 'center'},
-            ]}>
-            <SvgTest />
-          </View> */}
       </View>
       <View style={styles.footer}>
         <TouchableOpacity style={styles.footerItem}>
@@ -128,7 +116,6 @@ const App = () => {
           <Text style={styles.footerItemText}>Message</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerItem}>
-          {/* <SVG /> */}
           <Text style={styles.footerItemText}>Management</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerItem}>
@@ -140,177 +127,4 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    alignContent: 'center',
-    justifyContent: 'flex-start',
-    flexDirection: 'column',
-    backgroundColor: '#F5F6F8',
-  },
-  header: {
-    marginTop: 20,
-    flexDirection: 'row',
-    width: '80%',
-    justifyContent: 'space-between',
-  },
-  avatarContainter: {
-    width: 80,
-    height: 80,
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundColor: '#fff',
-    left: -16,
-  },
-  image: {
-    resizeMode: 'contain',
-    width: '100%',
-    height: '100%',
-  },
-  iconPlus: {
-    position: 'absolute',
-    right: 0,
-    bottom: 0,
-    width: '30%',
-    height: '30%',
-  },
-  textProfile: {
-    // backgroundColor: '#fff',
-    width: '80%',
-    left: 16,
-    top: 5,
-  },
-  textProfileName: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  textProfileAdd: {},
-  buttonEdit: {},
-  textProfileOtherOption: {
-    color: '#60B939',
-  },
-  body: {
-    flexDirection: 'column',
-    marginTop: 24,
-  },
-  bodyStatus: {
-    flexDirection: 'row',
-    width: '100%',
-    alignSelf: 'center',
-    // backgroundColor: '#fff',
-  },
-  addCounter: {
-    flex: 0.33,
-    alignItems: 'center',
-  },
-  textCounterNumber: {
-    fontSize: 30,
-    fontWeight: '400',
-    textAlign: 'center',
-  },
-  textCounter: {
-    fontSize: 14,
-    fontWeight: '400',
-    textAlign: 'center',
-    left: 4,
-  },
-  addCounterBarrier1: {
-    alignSelf: 'flex-end',
-    borderRightWidth: 1,
-    borderRightColor: '#C4C4C4',
-    height: 35,
-    position: 'absolute',
-    top: 16,
-  },
-  bodyConfimationMethod: {
-    flexDirection: 'column',
-    width: '100%',
-    height: 117,
-    backgroundColor: '#FFFFFF',
-    borderRadius: 19,
-    marginTop: 20,
-    alignSelf: 'center',
-  },
-  bodyConfimationMethodDecoration: {
-    flexDirection: 'row',
-    width: '100%',
-    height: 30,
-  },
-  bodyConfimationMethodDecorationDeadSpace: {
-    flex: 0.4,
-    borderBottomWidth: 0.5,
-    borderBottomColor: '#C4C4C4',
-  },
-  bodyConfimationMethodDecorationText: {
-    top: 20,
-  },
-  bodyConfimationMethodIcons: {
-    flexDirection: 'row',
-  },
-  bodyConfimationMethodIcon: {
-    flex: 0.25,
-    resizeMode: 'contain',
-    height: 35,
-    width: 35,
-    marginTop: 30.5,
-  },
-  bodySettingOptions: {
-    flexDirection: 'column',
-    height: 50,
-    width: '100%',
-    marginTop: 60,
-    backgroundColor: '#FFFFFF',
-    alignSelf: 'center',
-  },
-  bodySettingOptionsItem: {
-    flexDirection: 'row',
-    width: '75%',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    height: 60,
-    borderBottomWidth: 1,
-    borderBottomColor: '#C4C4C4',
-    alignSelf: 'center',
-    marginTop: 10,
-  },
-  bodySettingOptionsItemIcon: {
-    flex: 0.33,
-    width: 20,
-    height: 30,
-    resizeMode: 'contain',
-    left: -35,
-    alignContent: 'flex-start',
-    // backgroundColor: '#fff',
-  },
-  bodySettingOptionsItemText: {
-    flex: 0.33,
-    width: '100%',
-    fontSize: 18,
-    fontWeight: '400',
-    left: -108,
-    // backgroundColor: '#fff',
-    // flexWrap: 'wrap',
-    backgroundColor: '#FFFFFF',
-  },
-  bodySettingOptionsItemIconBack: {
-    flex: 0.33,
-    width: 7.41,
-    height: 12,
-    right: -35,
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 0,
-    flexDirection: 'row',
-    width: '100%',
-    height: 69,
-    backgroundColor: '#FFFFFF',
-  },
-  footerItem: {
-    flex: 0.25,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-export default App;
+export {Page6};

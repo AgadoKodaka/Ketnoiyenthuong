@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   createNewAccount: {
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'flex-start',
     width: '90%',
     marginTop: 18,
