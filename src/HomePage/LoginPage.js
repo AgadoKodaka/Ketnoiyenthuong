@@ -54,7 +54,9 @@ const Page1 = () => {
         onPress={() => navigation.navigate('RecoverAccount')}>
         <Text style={styles.passRecoveryText}>Forgot Password?</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('HomeScreen')}>
         <Text style={(styles.buttonText, {color: 'white'})}>Login</Text>
       </TouchableOpacity>
       <View style={styles.createNewAccount}>
@@ -66,7 +68,7 @@ const Page1 = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.otherLoginView}>
-        <Text style={{fontSize: 14}}>- Or login with -</Text>
+        <Text style={{fontSize: 15}}>- Or login with -</Text>
       </View>
       <View style={styles.socialMediaView}>
         <TouchableOpacity

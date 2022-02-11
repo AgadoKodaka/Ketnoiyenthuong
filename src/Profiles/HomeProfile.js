@@ -22,8 +22,10 @@ import IconInfo from '../../assets/SVG/Group_106.svg';
 import IconCog from '../../assets/SVG/clarity_settings_solid.svg';
 import IconStar from '../../assets/SVG/ant-design_star_filled.svg';
 import IconHelp from '../../assets/SVG/ic_round-contact_support.svg';
-``;
-const Page6 = () => {
+import {useNavigation} from '@react-navigation/native';
+
+const Page7 = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
@@ -83,14 +85,17 @@ const Page6 = () => {
           </View>
         </View>
         <TouchableOpacity
-          style={[styles.bodySettingOptionsItem, {marginTop: 40}]}>
+          style={[styles.bodySettingOptionsItem, {marginTop: 40}]}
+          onPress={() => navigation.navigate('AccountSetting')}>
           <IconCog style={styles.bodySettingOptionsItemIcon} />
           <Text style={[styles.bodySettingOptionsItemText, {numberOfLines: 1}]}>
             Account setting
           </Text>
           <IconBack style={styles.bodySettingOptionsItemIconBack} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.bodySettingOptionsItem}>
+        <TouchableOpacity
+          style={styles.bodySettingOptionsItem}
+          onPress={() => navigation.navigate('VottingPage')}>
           <IconStar style={styles.bodySettingOptionsItemIcon} />
           <Text style={styles.bodySettingOptionsItemText}>Rate!!</Text>
           <IconBack style={styles.bodySettingOptionsItemIconBack} />
@@ -107,7 +112,9 @@ const Page6 = () => {
           <IconHome />
           <Text style={styles.footerItemText}>Home</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.footerItem}>
+        <TouchableOpacity
+          style={styles.footerItem}
+          onPress={() => navigation.navigate('FollowingList')}>
           <IconHeart />
           <Text style={styles.footerItemText}>Community</Text>
         </TouchableOpacity>
@@ -116,6 +123,7 @@ const Page6 = () => {
           <Text style={styles.footerItemText}>Message</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerItem}>
+          <IconInfo />
           <Text style={styles.footerItemText}>Management</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerItem}>
@@ -127,4 +135,4 @@ const Page6 = () => {
   );
 };
 
-export {Page6};
+export {Page7};

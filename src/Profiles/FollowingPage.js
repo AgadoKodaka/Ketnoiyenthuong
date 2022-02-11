@@ -6,7 +6,6 @@ import {
   Text,
   StatusBar,
   TouchableOpacity,
-  TextInput,
 } from 'react-native';
 const App = () => {
   return (

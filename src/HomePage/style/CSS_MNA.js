@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   inputId1: {
     width: '90%',
-    height: 50,
+    height: 60,
     borderColor: '#C4C4C4',
     borderWidth: 0.5,
     marginTop: 42,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   inputId2: {
     width: '90%',
-    height: 50,
+    height: 60,
     borderColor: '#C4C4C4',
     borderWidth: 0.5,
     marginTop: 18,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   inputPassword: {
     width: '90%',
-    height: 50,
+    height: 60,
     marginTop: 18,
   },
   inputPass: {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   hide_show: {
     flexDirection: 'row',
     position: 'absolute',
-    top: 14,
+    top: 18,
     right: 14,
     justifyContent: 'space-between',
   },
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
   },
   signUpText: {
     color: '#60B939',
+    fontSize: 15,
   },
   otherLoginView: {
     alignItems: 'center',
@@ -112,6 +113,13 @@ const styles = StyleSheet.create({
   imageAcc: {
     width: '100%',
     height: '100%',
+  },
+  text: {
+    fontSize: 15,
+  },
+  passRecoveryText: {
+    fontSize: 15,
+    color: 'black',
   },
 });
 export default styles;

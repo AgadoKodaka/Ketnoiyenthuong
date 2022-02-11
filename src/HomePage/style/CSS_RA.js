@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '90%',
-    height: 50,
+    height: 60,
     borderColor: '#C4C4C4',
     borderWidth: 0.5,
     marginTop: 20,
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  signUpText: {
-    color: '#00BFFF',
+  buttonText: {
+    fontSize: 15,
   },
   buttonAccGG: {
     marginTop: 18,

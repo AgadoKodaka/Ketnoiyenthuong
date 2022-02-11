@@ -58,7 +58,7 @@ const Page2 = () => {
         <Text style={styles.passRecoveryText}>Forgot Password?</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={(styles.buttonText, {color: 'white'})}>Login</Text>
+        <Text style={(styles.buttonText, {color: 'white'})}>Sign up</Text>
       </TouchableOpacity>
       <View style={styles.createNewAccount}>
         <Text style={styles.text}>Already have an account?</Text>
@@ -69,7 +69,7 @@ const Page2 = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.otherLoginView}>
-        <Text style={{fontSize: 14}}>- Or login with -</Text>
+        <Text style={{fontSize: 15}}>- Or login with -</Text>
       </View>
       <View style={styles.socialMediaView}>
         <TouchableOpacity

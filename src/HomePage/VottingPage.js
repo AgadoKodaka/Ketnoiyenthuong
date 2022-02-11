@@ -7,7 +7,7 @@ import IconSmile2 from '../../assets/SVG/smile2.svg';
 import IconGreenTick from '../../assets/SVG/ant-design_check-circle-filled.svg';
 
 import SquareButton from '../components/SquareButton';
-const App = () => {
+const Page9 = () => {
   const [isEnabled1, setIsEnabled1] = useState(false);
   const [isEnabled2, setIsEnabled2] = useState(false);
   const [isEnabled3, setIsEnabled3] = useState(false);
@@ -83,7 +83,7 @@ const App = () => {
             number={3}
           />
         </View>
-        <Text style={[styles.text, {left: -152, marginTop: 20, fontSize: 14}]}>
+        <Text style={[styles.text, {left: -152, marginTop: 20, fontSize: 15}]}>
           Review
         </Text>
         <TextInput
@@ -94,4 +94,4 @@ const App = () => {
     </SafeAreaView>
   );
 };
-export default App;
+export {Page9};

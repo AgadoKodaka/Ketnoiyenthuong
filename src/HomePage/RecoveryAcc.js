@@ -15,10 +15,16 @@ const Page3 = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
       <Logo1 style={styles.image} />
-      <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
+      <Text style={{fontSize: 21, fontWeight: 'bold', color: 'black'}}>
         Recover your account
       </Text>
-      <Text style={{width: '90%', textAlign: 'center', marginTop: 18}}>
+      <Text
+        style={{
+          width: '90%',
+          textAlign: 'center',
+          marginTop: 18,
+          fontSize: 15,
+        }}>
         If you forgot your password, please enter your email address or phone
         number below.
       </Text>

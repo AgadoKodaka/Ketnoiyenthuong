@@ -1,8 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Page1} from './HomeProfile';
-import {Page2} from './AccSetting';
+import {Page7} from './HomeProfile';
+import {Page8} from './AccSetting';
+import {Page9} from '../HomePage/VottingPage';
+import {Page10} from './Personalnfo';
+import {Page11} from './PhoneConfirmation';
+import {Page12} from './ConfirmationPage(Email)';
+import {Page13} from './NoficationSetting';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,58 +16,46 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen
         name="ProfilePage"
-        component={Page1}
+        component={Page7}
         options={{headerShown: false}}
       />
       <Stack.Screen
         name="AccountSetting"
-        component={Page2}
-        options={}
+        component={Page8}
+        options={{title: 'Account Setting'}}
       />
       <Stack.Screen
-        name="RecoverAccount"
-        component={Page3}
+        name="Votting Page"
+        component={Page9}
+        options={{title: 'Review'}}
+      />
+      <Stack.Screen
+        name="Personalnfo"
+        component={Page10}
+        options={{title: 'Personal Info'}}
+      />
+      <Stack.Screen
+        name="PhoneConfirmation"
+        component={Page11}
         options={{
           title: '',
-          headerStyle: {
-            backgroundColor: '#F5F6F8',
-          },
-          headerShadowVisible: false,
-          headerBackTitleVisible: false,
         }}
       />
       <Stack.Screen
-        name="2faAuth"
-        component={Page4}
+        name="NotificationSetting"
+        component={Page13}
         options={{
-          title: '',
-          headerStyle: {
-            backgroundColor: '#F5F6F8',
-          },
-          headerShadowVisible: false,
-          headerBackTitleVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="PassReset"
-        component={Page5}
-        options={{
-          title: '',
-          headerStyle: {
-            backgroundColor: '#F5F6F8',
-          },
-          headerShadowVisible: false,
-          headerBackTitleVisible: false,
+          title: 'Nofication Setting',
         }}
       />
     </Stack.Navigator>
   );
 }
-
-export default function App() {
+const Page6 = () => {
   return (
     <NavigationContainer>
       <MyStack />
     </NavigationContainer>
   );
-}
+};
+export {Page6};

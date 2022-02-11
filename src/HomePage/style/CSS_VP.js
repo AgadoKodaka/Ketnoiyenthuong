@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
   },
   body: {
     width: '95%',
-    marginTop: 76,
+    marginTop: 60,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    fontSize: 20,
+    fontSize: 25,
     color: '#60B939',
     fontWeight: '400',
     fontFamily: 'SF Pro Text',
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 20,
+    fontSize: 17,
   },
   reviewContainter: {
     flex: 0.33,
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   },
   textIcon: {
     marginTop: 10,
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: '400',
     fontFamily: 'SF Pro Text',
   },

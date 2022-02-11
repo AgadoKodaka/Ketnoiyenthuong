@@ -8,8 +8,9 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import IconFlagVN from '../../assets/SVG/Flag_of_North_Vietnam_(19551976).svg';
-const App = () => {
+import {useNavigation} from '@react-navigation/native';
+const Page15 = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
@@ -28,14 +29,12 @@ const App = () => {
         <TouchableOpacity style={styles.bodyButton}>
           <Text style={styles.bodyButtonText}>Confirm</Text>
         </TouchableOpacity>
-        <View style={{width: '100%', backgroundColor: 'black'}}>
-          <Text style={[styles.bodyText, {marginTop: 20}]}>
-            Havent received the code?
-            <TouchableOpacity>
-              <Text>Resend</Text>
-            </TouchableOpacity>
-          </Text>
-        </View>
+        {/* <Text style={[styles.bodyText, {marginTop: 20}]}>
+          Havent received the code?
+          <TouchableOpacity style={{position: 'absolute'}}>
+            <Text style={{color: 'green'}}>Resend</Text>
+          </TouchableOpacity>
+        </Text> */}
       </View>
     </SafeAreaView>
   );
@@ -57,13 +56,15 @@ const styles = StyleSheet.create({
   },
   bodyTextHeader: {
     marginTop: 76,
-    fontSize: 34,
+    fontSize: 35,
     fontWeight: 'bold',
-    color: 'black',
+    // color: 'black',
   },
   bodyText: {
     width: '100%',
     marginTop: 20,
+    fontSize: 15,
+    flexDirection: 'row',
   },
   bodyTextInput: {
     width: '100%',
@@ -89,4 +90,4 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-export default App;
+export {Page15};

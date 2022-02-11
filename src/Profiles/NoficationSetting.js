@@ -1,15 +1,9 @@
 import React, {useState} from 'react';
-import {
-  SafeAreaView,
-  View,
-  StyleSheet,
-  Text,
-  StatusBar,
-  Switch,
-} from 'react-native';
+import {SafeAreaView, View, Text, StatusBar, Switch} from 'react-native';
 import IconMessageDark from '../../assets/SVG/jam_messenger.svg';
 import IconPepople from '../../assets/SVG/ic_round-group.svg';
-const App = () => {
+import styles from './style/CSS_NS';
+const Page13 = () => {
   const [isEnabled1, setIsEnabled1] = useState(false);
   const [isEnabled2, setIsEnabled2] = useState(false);
   const toggleSwitch1 = () => setIsEnabled1(previousState => !previousState);
@@ -49,46 +43,4 @@ const App = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F6F8',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  body: {
-    width: '90%',
-    height: '100%',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    marginTop: 111,
-  },
-  setting: {
-    width: '100%',
-    height: 56,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    borderBottomWidth: 0.5,
-    borderBottomColor: '#C4C4C4',
-  },
-  icon: {
-    flex: 0.2,
-    // backgroundColor: 'black',
-  },
-  textSetting: {
-    flex: 0.6,
-  },
-  text: {
-    fontSize: 20,
-  },
-
-  switch: {
-    // backgroundColor: 'black',
-    flex: 0.2,
-    right: 0,
-  },
-});
-export default App;
+export {Page13};

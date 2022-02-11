@@ -3,13 +3,14 @@ import {SafeAreaView, Text, StatusBar, TouchableOpacity} from 'react-native';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 import Logo1 from '../../assets/SVG/logo_1.svg';
 import styles from './style/CSS_2fa';
-const Page4 = props => {
+const Page14 = props => {
   console.log('props', props);
   const [otp, setOtp] = useState('');
   const OTP = '123456';
   function checkOTP(value) {
     if (value === OTP) {
-      props.navigation.navigate('PassReset');
+      alert('Correct code');
+      props.navigation.navigate('PersonalInfo');
     } else {
       alert('Wrong code');
     }
@@ -54,4 +55,4 @@ const Page4 = props => {
   );
 };
 
-export {Page4};
+export {Page14};

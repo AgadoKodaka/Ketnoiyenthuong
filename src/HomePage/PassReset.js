@@ -13,10 +13,16 @@ const Page5 = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
       <Logo1 style={styles.image} />
-      <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
+      <Text style={{fontSize: 21, fontWeight: 'bold', color: 'black'}}>
         Reset your password
       </Text>
-      <Text style={{width: '80%', textAlign: 'center', marginTop: 18}}>
+      <Text
+        style={{
+          width: '80%',
+          textAlign: 'center',
+          marginTop: 18,
+          fontSize: 15,
+        }}>
         Create your new password below.
       </Text>
       <TextInput

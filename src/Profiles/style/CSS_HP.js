@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     height: 117,
     backgroundColor: '#FFFFFF',
     borderRadius: 19,
-    marginTop: 20,
+    marginTop: 30,
     alignSelf: 'center',
     justifyContent: 'center',
   },
@@ -161,6 +161,9 @@ const styles = StyleSheet.create({
     flex: 0.25,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  footerItemText: {
+    fontSize: 12,
   },
 });
 export default styles;

@@ -9,19 +9,24 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {TabView, SceneMap} from 'react-native-tab-view';
+import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import DATA from '../Data.js';
 
-// const [selectedId1, setSelectedId1] = React.useState(false);
-// const [selectedId2, setSelectedId2] = React.useState(false);
-
-// const [selectedId3, setSelectedId3] = React.useState(false);
-
-// const [selectedId4, setSelectedId4] = React.useState(false);
-
-// const [selectedId5, setSelectedId5] = React.useState(false);
-
 const Check = () => {};
+const renderTabBar = props => (
+  <TabBar
+    {...props}
+    indicatorStyle={{backgroundColor: '#60B939'}}
+    style={{backgroundColor: '#F5F6F8'}}
+    renderLabel={({route, focused, color}) => (
+      <Text style={{color: 'black', margin: 8, fontSize: 15}}>
+        {route.key == 'first'
+          ? '5 People Following'
+          : 'Following ' + 5 + ' People'}
+      </Text>
+    )}
+  />
+);
 const Item1 = ({name, avatar}) => (
   <View style={styles.item}>
     <Image source={avatar} style={styles.avatar} />
@@ -70,11 +75,11 @@ const renderScene = SceneMap({
   second: SecondRoute,
 });
 
-const App = () => {
+const Page6 = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    {key: 'first', title: '5 people following'},
-    {key: 'second', title: 'Following 5 people'},
+    {key: 'first', title: ''},
+    {key: 'second', title: ''},
   ]);
   return (
     <SafeAreaView style={styles.container}>
@@ -84,6 +89,7 @@ const App = () => {
         renderScene={renderScene}
         onIndexChange={setIndex}
         initialLayout={initialLayout}
+        renderTabBar={renderTabBar}
         style={styles.container}
       />
     </SafeAreaView>
@@ -134,4 +140,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-export default App;
+export {Page6};

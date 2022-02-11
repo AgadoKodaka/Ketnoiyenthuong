@@ -9,7 +9,10 @@ import {
   TextInput,
 } from 'react-native';
 import IconFlagVN from '../../assets/SVG/Flag_of_North_Vietnam_(19551976).svg';
-const App = () => {
+import {useNavigation} from '@react-navigation/native';
+
+const Page11 = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={'#60B939'} />
@@ -25,7 +28,6 @@ const App = () => {
               alignItems: 'center',
               justifyContent: 'center',
               flex: 0.4,
-              //   marginRight: -120,
               marginLeft: -15,
               borderRightColor: 'white',
               borderRightWidth: 2,
@@ -41,7 +43,9 @@ const App = () => {
         <Text style={[styles.bodyText, {marginTop: 20}]}>
           We will send a confirmation code to your number (+84)
         </Text>
-        <TouchableOpacity style={styles.bodyButton}>
+        <TouchableOpacity
+          style={styles.bodyButton}
+          onPress={() => navigation.navigate('2faAuth_2')}>
           <Text style={styles.bodyButtonText}>Confirm</Text>
         </TouchableOpacity>
       </View>
@@ -65,17 +69,19 @@ const styles = StyleSheet.create({
   },
   bodyTextHeader: {
     marginTop: 76,
-    fontSize: 34,
+    fontSize: 35,
     fontWeight: 'bold',
     color: 'black',
   },
   bodyText: {
     width: '100%',
+    marginBottom: 20,
     marginTop: 20,
+    fontSize: 15,
   },
   bodyTextDecoration: {
     width: '100%',
-    height: 50,
+    height: 60,
     borderRadius: 10,
     backgroundColor: '#00000014',
     flexDirection: 'row',
@@ -105,4 +111,4 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-export default App;
+export {Page11};
